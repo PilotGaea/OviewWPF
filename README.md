@@ -20,25 +20,25 @@
 ```
 5. 於grid1的Loaded事件中撰寫
 ```
-	private void Window_Loaded(object sender, RoutedEventArgs e)
-	{
-		// Create the interop host control.
-		System.Windows.Forms.Integration.WindowsFormsHost host =
-			new System.Windows.Forms.Integration.WindowsFormsHost();
+private void Window_Loaded(object sender, RoutedEventArgs e)
+{
+	// Create the interop host control.
+	System.Windows.Forms.Integration.WindowsFormsHost host =
+		new System.Windows.Forms.Integration.WindowsFormsHost();
 
-		// Create the ActiveX control.
-		AxUniverseLiteLib.AxPGTerrainView axTerrainView = new AxUniverseLiteLib.AxPGTerrainView();
+	// Create the ActiveX control.
+	AxUniverseLiteLib.AxPGTerrainView axTerrainView = new AxUniverseLiteLib.AxPGTerrainView();
 
-		// Assign the ActiveX control as the host control's child.
-		host.Child = axTerrainView;
+	// Assign the ActiveX control as the host control's child.
+	host.Child = axTerrainView;
 
-		// Add the interop host control to the Grid
-		// control's collection of child controls.
-		this.grid1.Children.Add(host);
+	// Add the interop host control to the Grid
+	// control's collection of child controls.
+	this.grid1.Children.Add(host);
 
-		// Open a .TDF file with the ActiveX control.
-		axTerrainView.Project.Open(@"D:\GISFiles\PGEarth.TDF");
-	}
+	// Open a .TDF file with the ActiveX control.
+	axTerrainView.Project.Open(@"D:\GISFiles\PGEarth.TDF");
+}
 ```
 
 6. 建置後運行
