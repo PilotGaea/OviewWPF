@@ -1,9 +1,9 @@
 # OviewWPF
 
 ## 參考文章[逐步解說：在 WPF 中裝載 ActiveX 控制項](https://docs.microsoft.com/zh-tw/dotnet/framework/wpf/advanced/walkthrough-hosting-an-activex-control-in-wpf)
-1. WPF應用程式OviewWPF
-2. 加入->新增項目->Windows Form = Form1.cs
-3. 於工具箱將PGTerrainView Class 拉到Form1上，會自動參考
+1. 開啟visual studio 新增方案 -> WPF應用程式 -> 命名為OviewWPF
+2. 於OviewWPF->右鍵->加入->新增項目->Windows Form -> 命名Form1.cs
+3. 於工具箱將PGTerrainView Class 拉到Form1上，會自動參考(此時Form1已無作用)
 	+ AxUniverseLiteLib
 	+ UniverseLiteLib
 4. 手動加入 WindowsFormsIntegration 元件的參考，其名稱為 WindowsFormsIntegration。
@@ -13,7 +13,7 @@
     
 </Grid>
 ```
-5. 並於grid1的Loaded事件中撰寫
+5. 於grid1的Loaded事件中撰寫
 ```
 	private void Window_Loaded(object sender, RoutedEventArgs e)
 	{
